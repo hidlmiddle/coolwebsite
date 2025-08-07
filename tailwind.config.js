@@ -10,23 +10,12 @@ module.exports = {
         sans: ['Inter var', 'sans-serif'],
         serif: ['Playfair Display', 'serif'],
       },
-      colors: {
-        glass: {
-          rose: '#FFF1F2',
-          mint: '#F0FDF4',
-          lavender: '#F5F3FF',
-        },
-      },
       backdropBlur: {
-        '4xl': '72px',
-      },
-      borderRadius: {
-        '4xl': '2rem',
-        '5xl': '2.5rem',
+        '40': '40px',
       },
       boxShadow: {
-        glass: '0 8px 32px -4px rgba(0, 0, 0, 0.1)',
-        'glass-hover': '0 16px 48px -8px rgba(0, 0, 0, 0.15)',
+        frost: '0 8px 32px rgba(0, 0, 0, 0.37)',
+        'frost-hover': '0 16px 48px rgba(0, 0, 0, 0.45)',
       },
       container: {
         center: true,
@@ -38,8 +27,17 @@ module.exports = {
           xl: '1280px',
         },
       },
-      transitionTimingFunction: {
-        'glass': 'cubic-bezier(0.4, 0, 0.2, 1)',
+      backgroundImage: {
+        'sheen': 'linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 60%)',
+      },
+      keyframes: {
+        shimmer: {
+          '0%': { transform: 'translate(-50%, -50%) rotate(-15deg)' },
+          '100%': { transform: 'translate(50%, 50%) rotate(-15deg)' }
+        }
+      },
+      animation: {
+        shimmer: 'shimmer 10s linear infinite',
       },
     },
   },
