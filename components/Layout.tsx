@@ -9,9 +9,9 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div className="min-h-screen flex flex-col relative z-0">
+    <div className="min-h-screen flex flex-col">
       <VideoBackground />
-      <div className="relative z-10">
+      <div className="relative z-10 flex flex-col flex-grow">
         <Header />
         <main className="flex-grow">
           {children}
