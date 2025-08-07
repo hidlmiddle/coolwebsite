@@ -3,26 +3,38 @@ import { ThemeToggle } from './ThemeToggle';
 
 export default function Header() {
   return (
-    <header className="border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 transition-colors duration-500">
-      <div className="container mx-auto py-4">
+    <div className="container mx-auto pt-4">
+      <header className="glass-navbar">
         <nav className="flex items-center justify-between">
-          <Link href="/" className="text-xl font-bold text-gray-900 dark:text-white">
+          <Link 
+            href="/" 
+            className="text-2xl font-serif font-bold bg-gradient-to-r from-rose-500 to-indigo-500 bg-clip-text text-transparent"
+          >
             Your Site
           </Link>
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center space-x-8">
             <ul className="flex space-x-6">
               <li>
-                <Link href="/" className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">
+                <Link 
+                  href="/" 
+                  className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">
+                <Link 
+                  href="/about" 
+                  className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
+                >
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">
+                <Link 
+                  href="/contact" 
+                  className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
+                >
                   Contact
                 </Link>
               </li>
@@ -30,7 +42,7 @@ export default function Header() {
             <ThemeToggle />
           </div>
         </nav>
-      </div>
-    </header>
+      </header>
+    </div>
   );
 }

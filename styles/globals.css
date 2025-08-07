@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,21 +8,56 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply text-gray-900 bg-white dark:text-gray-100 dark:bg-gray-900;
+    @apply text-gray-900 bg-gradient-to-br from-glass-rose/30 via-glass-mint/30 to-glass-lavender/30 min-h-screen;
+    @apply dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 dark:text-white;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
   }
 }
 
 @layer components {
-  .btn {
-    @apply px-6 py-2 rounded-md transition-colors duration-200;
+  .glass-panel {
+    @apply backdrop-blur-2xl bg-white/70 dark:bg-gray-900/70 border border-white/20 dark:border-white/10;
+    @apply rounded-3xl shadow-glass transition-all duration-200 ease-glass;
+    @apply hover:shadow-glass-hover hover:-translate-y-1;
   }
-  .btn-primary {
-    @apply btn bg-blue-600 text-white hover:bg-blue-700;
+
+  .glass-button {
+    @apply px-6 py-3 rounded-2xl transition-all duration-200 ease-glass;
+    @apply bg-gradient-to-br from-white/80 to-white/60 backdrop-blur-xl;
+    @apply dark:from-white/20 dark:to-white/10;
+    @apply border border-white/20 shadow-glass;
+    @apply hover:shadow-glass-hover hover:-translate-y-0.5;
+    @apply active:translate-y-0 active:shadow-glass;
   }
-  .input {
-    @apply w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+
+  .glass-input {
+    @apply w-full px-4 py-3 rounded-xl bg-white/70 dark:bg-gray-900/70;
+    @apply border border-white/20 dark:border-white/10 backdrop-blur-xl;
+    @apply focus:outline-none focus:ring-2 focus:ring-white/30 dark:focus:ring-white/20;
+    @apply placeholder:text-gray-500/70 dark:placeholder:text-gray-400/70;
   }
-  .textarea {
-    @apply input min-h-[120px];
+
+  .glass-card {
+    @apply glass-panel p-6 hover:bg-white/80 dark:hover:bg-gray-900/80;
+  }
+
+  .glass-navbar {
+    @apply glass-panel sticky top-4 mx-4 z-50 px-6 py-4;
+    @apply bg-white/60 dark:bg-gray-900/60;
+  }
+
+  .glass-sidebar {
+    @apply glass-panel fixed right-4 top-24 w-64 p-4;
+    @apply bg-white/60 dark:bg-gray-900/60;
+  }
+
+  .glass-section {
+    @apply glass-panel p-8 mb-8;
+  }
+
+  .glass-grid {
+    @apply grid gap-6 sm:gap-8;
   }
 }
