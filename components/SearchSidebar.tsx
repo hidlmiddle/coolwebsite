@@ -45,13 +45,14 @@ export function SearchSidebar({ sections }: SearchSidebarProps) {
 
   return (
     <aside className="glass-sidebar">
-      <div className="space-y-4">
+      <div className="space-y-4 pointer-events-auto">
         <input
           type="text"
           placeholder="Search sections..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className="glass-input"
+          aria-label="Search sections"
         />
         
         <nav className="space-y-2">

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,10 +8,10 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply text-gray-100 min-h-screen;
+    @apply text-gray-100 min-h-screen font-sans;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif;
+    @apply font-sans font-semibold;
   }
 }
 
@@ -101,11 +101,12 @@
     @apply 
       fixed 
       right-4 
-      top-24 
+      top-32
       w-64 
       p-4 
       glass-card 
-      bg-black/20;
+      bg-black/20
+      z-20;
   }
 
   .glass-section {
