@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { SearchSidebar } from '../components/SearchSidebar';
+import GetInTouchCta from '../components/GetInTouchCta';
 
 const sections = [
   { id: 'hero', title: 'Welcome' },
@@ -23,20 +23,7 @@ export default function Home() {
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
               A modern website built with Next.js and Tailwind CSS, featuring a stunning glassmorphism design
             </p>
-            <a
-              href="#contact"
-              aria-label="Get in Touch"
-              className="inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
-            >
-              <Image
-                src="/images/get-in-touch.png"
-                alt="Get in Touch"
-                width={384}
-                height={96}
-                priority
-                sizes="(max-width: 768px) 256px, 384px"
-              />
-            </a>
+            <GetInTouchCta className="mt-8 mx-auto" />
           </div>
         </section>
 
